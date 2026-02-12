@@ -1,4 +1,3 @@
-package DynamicProgramming.DpOnStrings;
 
 public class shortestSuperSequence {
     public static String shortestSupersequence(String a, String b) {
