@@ -1,4 +1,4 @@
-package DynamicProgramming.KnapscakDp;
+package DynamicProgramming.KnapsackDp;
 
 import java.util.ArrayList;
 import java.util.Collections;
