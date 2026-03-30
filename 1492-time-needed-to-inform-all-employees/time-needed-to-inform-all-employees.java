@@ -14,12 +14,12 @@ class Solution {
         int ans = 0;
         while(!q.isEmpty()){
             int size = q.size();
-                int iD = q.poll();
-                for(int sub : Tree.get(iD)){
-                    subSum[sub] = subSum[iD] + informTime[iD];
-                    ans = Math.max(ans,subSum[sub]);
-                    q.add(sub);
-                }
+            int iD = q.poll();
+            for(int sub : Tree.get(iD)){
+                subSum[sub] = subSum[iD] + informTime[iD];
+                ans = Math.max(ans,subSum[sub]);
+                q.add(sub);
+            }
         }
         return ans;
     }
