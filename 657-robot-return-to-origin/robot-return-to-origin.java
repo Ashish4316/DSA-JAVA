@@ -5,10 +5,15 @@ class Solution {
         int D = 0;
         int R = 0;
         for(int i = 0;i < moves.length();i++){
-            if(moves.charAt(i) == 'U') U++;
-            if(moves.charAt(i) == 'L') L++;
-            if(moves.charAt(i) == 'D') D++;
-            if(moves.charAt(i) == 'R') R++;
+            if(moves.charAt(i) == 'U'){
+                U++;
+            }else if(moves.charAt(i) == 'L'){
+                L++;
+            }else if(moves.charAt(i) == 'D'){
+                D++;
+            }else if(moves.charAt(i) == 'R'){
+                R++;
+            }
         }
         return U == D && L == R;
     }
