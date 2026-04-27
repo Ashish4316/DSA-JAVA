@@ -1,25 +1,20 @@
 class Solution {
     int n;
     int m;
-    
     public boolean hasValidPath(int[][] grid) {
         n = grid.length;
         m = grid[0].length;
         int [][] visited = new int[n][m];
         return dfs(grid,0,0,visited);
     }
-    
     public boolean dfs(int [][] grid,int i,int j,int [][] visited){
         if(i < 0 || i >= n || j < 0 || j >= m || visited[i][j] == 1){
             return false;
         }
-        
         if(i == n-1 && j == m-1){
             return true;
         }
-        
         visited[i][j] = 1;
-        
         if(grid[i][j] == 1){
             return (isValid(grid,i,j,i,j-1) && dfs(grid,i,j-1,visited)) || (isValid(grid,i,j,i,j+1) && dfs(grid,i,j+1,visited));        
         }else if(grid[i][j] == 2){
