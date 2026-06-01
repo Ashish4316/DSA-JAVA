@@ -31,7 +31,7 @@ class Solution {
         if(budget-price >= 0){
             pick = 1 + free[i] + solve(i+1, items, budget - price);
             int extra = solve(i, items, budget - price);
-            if (extra != Integer.MIN_VALUE) {
+            if(extra != Integer.MIN_VALUE){
                 pick = Math.max(pick, 1 + extra);
             }
         }
